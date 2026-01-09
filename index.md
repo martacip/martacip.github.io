@@ -1,16 +1,21 @@
 ---
+layout: home
 title: Marta Cipriani
 ---
 
 # Marta Cipriani
 
-*PhD in Statistics – Survival Analysis*
+*PhD in Statistics*
+
+I am a PhD researcher working on survival analysis, mixture cure models,
+synthetic data generation, and dynamic prediction.
 
 ## Research interests
 - Mixture cure models
-- Dynamic prediction
+- Landmarking
+- Multiple imputation
 - Synthetic data
 
 ## Links
 - [GitHub](https://github.com/martacip)
-- [Google Scholar](https://scholar.google.com/citations?user=tgAEK50AAAAJ&hl=it)
+- [Google Scholar](...)
