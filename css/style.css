@@ -143,4 +143,20 @@ li {
   margin-bottom: 4px;
 }
 
+.pub-list {
+  list-style-type: disc; /* puntini */
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+
+.pub-list li {
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.pub-list a {
+  text-decoration: none;
+  margin-left: 6px;
+  font-size: 0.9em;
+}
 
