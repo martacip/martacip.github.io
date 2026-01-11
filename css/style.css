@@ -182,3 +182,21 @@ li {
   height: 100px; /* stessa altezza navbar */
   margin-top: -100px;
 }
+
+.social-cv {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.social-icon {
+  width: 40px;      /* dimensione icone */
+  height: 40px;
+  transition: transform 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);  /* effetto hover */
+}
+
