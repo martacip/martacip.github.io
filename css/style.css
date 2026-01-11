@@ -11,8 +11,9 @@ nav {
   top: 0;
   width: 100%;
   background: #ffffff;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e0e0e0;
   z-index: 1000;
+  font-size: 0.95em;
 }
 
 .nav-container {
@@ -45,15 +46,15 @@ nav a:hover {
 }
 
 .section {
-  padding: 100px 20px;
+  padding: 90px 20px;
 }
 
 .section.light {
-  background: #f7f7f7;
+  background: #f4f4f4;
 }
 
 .content {
-  max-width: 800px;
+  max-width: 750px;
   margin: auto;
 }
 
@@ -97,3 +98,12 @@ footer {
   max-width: 650px;
   font-size: 1.05em;
 }
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
