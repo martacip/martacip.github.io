@@ -180,11 +180,9 @@ li {
   margin-bottom: 10px;
 }
 
-/* Aggiungi nel tuo style.css */
-:target::before {
-  content: "";
-  display: block;
-  height: 70px; /* altezza navbar */
+h1.section-title {
+  padding-top: 70px;
   margin-top: -70px;
 }
+
 
