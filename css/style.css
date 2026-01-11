@@ -47,10 +47,10 @@ nav a:hover {
   color: #0066cc;
 }
 
-/* ================= SEZIONI ================= */
+/* ================= SEZIONI / H1 ================= */
 .section {
-  padding-top: 100px;   /* circa l’altezza della navbar + margine */
-  margin-top: 0;        /* non serve più negative margin */
+  padding-top: 100px; /* spazio per navbar fissa */
+  margin-top: 0;
 }
 
 .section-title {
@@ -58,33 +58,16 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
-
-.section.light {
-  background: #f4f4f4;
-}
-
-.content {
-  max-width: 750px;
-  margin: auto;
-}
-
-/* ================= H1 / TITOLI PRINCIPALI ================= */
-h1 {
-  font-size: 2.5em;
-  padding-top: 80px;   /* spazio per navbar */
-  margin-top: -80px;   /* riallinea quando scrolli o arrivi tramite link */
-}
-
 /* ================= SOTTOTITOLI ================= */
 .subtitle {
   color: #666;
-  margin-top: -10px;
   font-size: 1.1em;
+  margin-top: -10px;
   margin-bottom: 30px;
 }
 
 h2 {
-  margin-top: 0;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
@@ -199,4 +182,3 @@ li {
   height: 100px; /* stessa altezza navbar */
   margin-top: -100px;
 }
-
