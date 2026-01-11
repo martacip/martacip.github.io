@@ -132,3 +132,15 @@ li {
   }
 }
 
+.research-interests {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  font-size: 0.95em;
+}
+
+.research-interests li {
+  margin-bottom: 4px;
+}
+
+
