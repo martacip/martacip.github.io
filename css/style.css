@@ -1,12 +1,13 @@
 /* ================= FONT ================= */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+/* ================= BODY ================= */
 body {
-  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  font-family: "Poppins", "Arial", sans-serif; /* font moderno */
   line-height: 1.75;
   color: #222;
-  background: #fdfdfd;
-  margin: 0;
+  background: #ffffff;
 }
 
 /* ================= NAVBAR ================= */
@@ -15,25 +16,25 @@ nav {
   top: 0;
   width: 100%;
   height: 80px;
-  background: #1e90ff; /* blu moderno */
-  border-bottom: 2px solid #0d6efd;
+  background: #f0f8ff; /* colore chiaro navbar */
+  border-bottom: 2px solid #1e90ff; /* bordo blu */
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .nav-container {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 25px;
+  padding: 15px 20px;
 }
 
 .logo {
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
   font-size: 1.5em;
+  color: #1e90ff;
 }
 
 nav ul {
@@ -45,52 +46,87 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #fff;
+  color: #333;
   font-weight: 500;
-  transition: color 0.3s, transform 0.2s;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #ffd700;
-  transform: scale(1.1);
+  color: #1e90ff;
 }
 
-/* ================= HERO / ABOUT ================= */
-.hero {
-  padding: 160px 50px 120px;
-  background: linear-gradient(135deg, #f0f8ff, #d0e7ff);
+/* ================= SEZIONI / H1 ================= */
+.section {
+  padding-top: 100px;
+  margin-top: 0;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  font-size: 2.8em;
+  margin-bottom: 25px;
+  color: #1e90ff;
+}
+
+/* ================= SOTTOTITOLI ================= */
+.subtitle {
+  color: #555;
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  color: #1e90ff;
+}
+
+/* ================= FOOTER ================= */
+footer {
   text-align: center;
+  padding: 30px;
+  background: #f0f8ff;
+  color: #333;
+  font-size: 0.9em;
+  border-top: 2px solid #1e90ff;
 }
 
-.hero .content div {
-  text-align: left;
-  max-width: 700px;
-  margin: auto;
+/* ================= HERO ================= */
+.hero {
+  padding: 140px 20px 100px;
+  background: #e6f2ff; /* About section leggero blu */
 }
 
 .hero h1 {
   font-size: 3em;
-  background: linear-gradient(90deg, #1e90ff, #0d6efd);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-.hero p, .hero .research-interests {
+.intro {
+  max-width: 650px;
   font-size: 1.05em;
-  margin-top: 15px;
+  color: #333;
 }
 
-.research-interests {
-  list-style: disc;
-  padding-left: 25px;
+/* ================= HERO GRID ================= */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr; /* immagine a sinistra */
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.research-interests li {
-  margin-bottom: 6px;
+.hero .content div {
+  text-align: left;
+  max-width: 650px;
 }
 
-/* ================= PROFILE IMAGE & SOCIAL ================= */
 .profile-pic {
   width: 220px;
   border-radius: 50%;
@@ -103,114 +139,15 @@ nav a:hover {
   box-shadow: 0 0 15px rgba(30,144,255,0.5);
 }
 
-.social-cv {
-  margin-top: 25px;
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.social-cv .social-icon {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-  transition: transform 0.3s, filter 0.3s;
-}
-
-.social-cv .social-icon:hover {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 6px #1e90ff);
-}
-
-/* ================= SECTIONS ================= */
-.section {
-  padding: 120px 50px;
-  margin-top: 0;
-}
-
-.section-title {
-  font-size: 2.8em;
-  margin-bottom: 30px;
-  color: #0d6efd;
-  background: linear-gradient(90deg, #0d6efd, #1e90ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ================= PUBLICATIONS ================= */
-.pub-container {
-  display: flex;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-.pub-column {
-  flex: 1;
-  min-width: 320px;
-}
-
-.pub-list {
-  list-style: disc;
-  padding-left: 25px;
-  margin-bottom: 25px;
-}
-
-.pub-list li {
-  margin-bottom: 14px;
-  line-height: 1.5;
-  transition: transform 0.2s, background 0.3s;
-  padding: 5px 10px;
-  border-radius: 8px;
-}
-
-.pub-list li:hover {
-  background: rgba(30,144,255,0.1);
-  transform: translateX(5px);
-}
-
-.pub-list a {
-  text-decoration: none;
-  margin-left: 6px;
-  font-size: 0.95em;
-  color: #0d6efd;
-  transition: color 0.3s;
-}
-
-.pub-list a:hover {
-  color: #ff6347;
-}
-
-/* ================= CONFERENCES ================= */
-.conference-section {
-  background: #f9f0ff; /* lilla chiaro */
-  padding: 120px 50px;
-}
-
-.conference-section h2 {
-  color: #8a2be2;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  text-align: center;
-  padding: 40px;
-  background: #1e90ff;
-  color: #fff;
-  font-size: 0.95em;
-}
-
-/* ================= MEDIA QUERIES ================= */
 @media (max-width: 900px) {
-  .hero, .section, .conference-section {
-    padding: 100px 30px;
-  }
-}
-
-@media (max-width: 700px) {
   .hero-grid {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .hero .content div {
+    text-align: center;
+    max-width: 100%;
   }
 
   .profile-pic {
@@ -218,9 +155,111 @@ footer {
   }
 }
 
+/* ================= LISTE ================= */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.research-interests {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  font-size: 0.95em;
+}
+
+.research-interests li {
+  margin-bottom: 6px;
+}
+
+/* ================= PUBBLICAZIONI / CONFERENCES ================= */
+.pub-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.pub-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.pub-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.pub-list li {
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.pub-list a {
+  text-decoration: none;
+  margin-left: 6px;
+  font-size: 0.95em;
+  color: #1e90ff;
+  transition: color 0.2s;
+}
+
+.pub-list a:hover {
+  color: #104e8b;
+}
+
+.pub-column h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Sezioni diverse per background */
+.section.about {
+  background: #e6f2ff;
+}
+
+.section.publications {
+  background: #fff0f5;
+}
+
+.section.conferences {
+  background: #f0fff0;
+}
+
+/* ================= SOCIAL ICONS ================= */
+.social-cv {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.social-cv .social-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-cv .social-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(30,144,255,0.5);
+}
+
 @media (max-width: 500px) {
   .social-cv .social-icon {
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
   }
+}
+
+/* ================= TARGET SCROLL ================= */
+:target::before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin-top: -100px;
 }
