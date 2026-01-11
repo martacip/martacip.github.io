@@ -49,8 +49,15 @@ nav a:hover {
 
 /* ================= SEZIONI ================= */
 .section {
-  padding: 90px 20px 20px; /* padding-top + margin compensazione navbar */
+  padding-top: 100px;   /* circa l’altezza della navbar + margine */
+  margin-top: 0;        /* non serve più negative margin */
 }
+
+.section-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
 
 .section.light {
   background: #f4f4f4;
