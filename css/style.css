@@ -108,3 +108,27 @@ li {
   margin-bottom: 8px;
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 180px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+
+@media (max-width: 700px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-pic {
+    margin: auto;
+  }
+}
+
