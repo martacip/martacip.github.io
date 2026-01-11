@@ -184,22 +184,32 @@ li {
 }
 
 /* ================= SOCIAL ICONS ================= */
+/* ================= SOCIAL ICONS ================= */
 .social-cv {
-  margin-top: 20px;       /* spazio dal testo sopra */
+  margin-top: 20px; /* spazio dal testo */
   display: flex;
-  gap: 15px;               /* spazio tra le icone */
+  gap: 15px;        /* distanza tra le icone */
   align-items: center;
 }
 
 .social-cv .social-icon {
-  width: 32px;             /* larghezza fissa */
-  height: 32px;            /* altezza fissa */
-  object-fit: contain;     /* mantiene proporzioni */
+  width: 32px;      /* larghezza fissa per le icone */
+  height: 32px;     /* altezza fissa per le icone */
+  object-fit: contain; /* mantiene le proporzioni reali dell’immagine */
   transition: transform 0.2s; /* effetto hover */
 }
 
 .social-cv .social-icon:hover {
-  transform: scale(1.2);   /* leggero ingrandimento al passaggio del mouse */
+  transform: scale(1.2); /* leggero ingrandimento al passaggio del mouse */
 }
+
+/* Riduce ulteriormente su schermi piccoli */
+@media (max-width: 500px) {
+  .social-cv .social-icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+
 
 
