@@ -1,3 +1,4 @@
+/* ================= BODY ================= */
 body {
   margin: 0;
   font-family: "Georgia", "Times New Roman", serif;
@@ -6,6 +7,7 @@ body {
   background: #ffffff;
 }
 
+/* ================= NAVBAR ================= */
 nav {
   position: fixed;
   top: 0;
@@ -45,8 +47,9 @@ nav a:hover {
   color: #0066cc;
 }
 
+/* ================= SEZIONI ================= */
 .section {
-  padding: 90px 20px;
+  padding: 90px 20px 20px; /* padding-top + margin compensazione navbar */
 }
 
 .section.light {
@@ -58,19 +61,27 @@ nav a:hover {
   margin: auto;
 }
 
+/* ================= H1 / TITOLI PRINCIPALI ================= */
 h1 {
   font-size: 2.5em;
+  padding-top: 80px;   /* spazio per navbar */
+  margin-top: -80px;   /* riallinea quando scrolli o arrivi tramite link */
 }
 
+/* ================= SOTTOTITOLI ================= */
 .subtitle {
   color: #666;
   margin-top: -10px;
+  font-size: 1.1em;
+  margin-bottom: 30px;
 }
 
 h2 {
   margin-top: 0;
+  margin-bottom: 10px;
 }
 
+/* ================= FOOTER ================= */
 footer {
   text-align: center;
   padding: 30px;
@@ -79,6 +90,7 @@ footer {
   font-size: 0.9em;
 }
 
+/* ================= HERO ================= */
 .hero {
   padding: 140px 20px 100px;
   background: #f9f9f9;
@@ -89,17 +101,12 @@ footer {
   margin-bottom: 10px;
 }
 
-.subtitle {
-  font-size: 1.1em;
-  color: #555;
-  margin-bottom: 30px;
-}
-
 .intro {
   max-width: 650px;
   font-size: 1.05em;
 }
 
+/* ================= LISTE ================= */
 ul {
   padding-left: 20px;
 }
@@ -108,6 +115,18 @@ li {
   margin-bottom: 8px;
 }
 
+.research-interests {
+  margin-top: 4px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  font-size: 0.95em;
+}
+
+.research-interests li {
+  margin-bottom: 4px;
+}
+
+/* ================= HERO GRID ================= */
 .hero-grid {
   display: grid;
   grid-template-columns: 180px 1fr;
@@ -132,31 +151,18 @@ li {
   }
 }
 
-.research-interests {
-  margin-top: 4px;
-  margin-bottom: 20px;
-  padding-left: 20px;
-  font-size: 0.95em;
-}
-
-.research-interests li {
-  margin-bottom: 4px;
-}
-
-/* FLEX CONTAINER PER DUE COLONNE */
+/* ================= PUBBLICAZIONI / DUE COLONNE ================= */
 .pub-container {
   display: flex;
   gap: 40px;
   flex-wrap: wrap; /* responsivo su smartphone */
 }
 
-/* COLONNE */
 .pub-column {
   flex: 1;
   min-width: 300px;
 }
 
-/* LISTE PUBBLICAZIONI */
 .pub-list {
   list-style-type: disc;
   padding-left: 20px;
@@ -174,17 +180,15 @@ li {
   font-size: 0.9em;
 }
 
-/* TITOLI SEZIONI */
 .pub-column h2 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-.section-title {
-  padding-top: 70px;   /* spazio per la navbar fissa */
-  margin-top: -70px;   /* riallinea quando scrolli o carichi la pagina */
-  font-size: 2.5em;
+/* ================= TARGET SCROLL ================= */
+:target::before {
+  content: "";
+  display: block;
+  height: 80px; /* altezza navbar */
+  margin-top: -80px;
 }
-
-
-
