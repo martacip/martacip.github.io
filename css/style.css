@@ -4,7 +4,8 @@ body {
   font-family: "Georgia", "Times New Roman", serif;
   line-height: 1.75;
   color: #222;
-  background: #ffffff;
+  background: #fdfdfd;
+  transition: background 0.3s;
 }
 
 /* ================= NAVBAR ================= */
@@ -13,24 +14,24 @@ nav {
   top: 0;
   width: 100%;
   height: 80px;
-  background: #0d1117; /* navbar scura e moderna */
-  border-bottom: 1px solid #1e1e1e;
+  background: #1e90ff; /* azzurro brillante */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background 0.3s;
 }
 
 .nav-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 15px 20px;
 }
 
 .logo {
   font-weight: bold;
-  color: #1e90ff;
+  color: #fff;
   font-size: 1.3em;
 }
 
@@ -44,39 +45,39 @@ nav ul {
 nav a {
   text-decoration: none;
   color: #fff;
-  position: relative;
+  font-weight: 500;
   transition: color 0.3s, transform 0.2s;
 }
 
-nav a::after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 0;
-  background: #1e90ff;
-  transition: width 0.3s;
-}
-
 nav a:hover {
-  color: #1e90ff;
-  transform: translateY(-2px);
+  color: #ffd700; /* oro */
+  transform: scale(1.05);
 }
 
-nav a:hover::after {
-  width: 100%;
+/* ================= SEZIONI ================= */
+section {
+  padding: 120px 20px 80px;
+  transition: background 0.3s;
 }
 
-/* ================= SEZIONI / H1 ================= */
-.section {
-  padding-top: 120px;
-  margin-top: 0;
+/* Sezioni colorate */
+#about {
+  background: #e0f7fa; /* ciano chiaro */
+  text-align: center;
+}
+
+#publications {
+  background: #fff3e0; /* crema chiaro */
+}
+
+#conferences {
+  background: #f1f8e9; /* verde chiaro */
 }
 
 .section-title {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  text-align: center;
-  background: linear-gradient(90deg, #1e90ff, #32cd32);
+  font-size: 2.8em;
+  margin-bottom: 25px;
+  background: linear-gradient(90deg, #7b2ff7, #00dbde);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -85,107 +86,28 @@ nav a:hover::after {
 .subtitle {
   color: #555;
   font-size: 1.2em;
-  margin-top: -10px;
+  margin-top: 10px;
   margin-bottom: 30px;
-  text-align: center;
-  transition: color 0.3s;
 }
 
-.subtitle:hover {
-  color: #1e90ff;
-}
-
-h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: #222;
-  transition: color 0.3s;
-}
-
-h2:hover {
-  color: #ff7f50;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #0d1117;
-  color: #fff;
-  font-size: 0.9em;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.15);
-}
-
-/* ================= HERO / SEZIONI COLORATE ================= */
-.hero {
-  padding: 140px 20px 100px;
-  transition: background 0.5s ease;
-}
-
-#about.hero {
-  background: #f0f8ff; /* AliceBlue */
-  color: #111;
-  text-align: center;
-}
-
-#publications.hero {
-  background: #fff8f0; /* Light Cream */
-  color: #222;
-}
-
-#conferences.hero {
-  background: #f0fff4; /* Mint Cream */
-  color: #222;
-}
-
-/* ================= HERO H1 ================= */
-.hero h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-  color: inherit;
-}
-
-/* ================= INTRO ================= */
-.intro {
-  max-width: 650px;
-  font-size: 1.05em;
-  margin: auto;
-  text-align: center;
-}
-
-/* ================= LISTE ================= */
-ul {
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 8px;
-}
-
-.research-interests {
-  margin-top: 4px;
-  margin-bottom: 20px;
-  padding-left: 20px;
-  font-size: 0.95em;
-}
-
-.research-interests li {
-  margin-bottom: 4px;
-}
-
-/* ================= HERO GRID ================= */
+/* ================= HERO GRID / ABOUT ================= */
 .hero-grid {
   display: grid;
   grid-template-columns: 180px 1fr;
   gap: 40px;
   align-items: center;
-  justify-content: center;
 }
 
 .profile-pic {
   width: 180px;
   border-radius: 50%;
-  border: 1px solid #ddd;
+  border: 2px solid #00dbde;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 @media (max-width: 700px) {
@@ -204,8 +126,6 @@ li {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
-  margin: auto;
-  max-width: 1000px;
 }
 
 .pub-column {
@@ -221,29 +141,80 @@ li {
 
 .pub-list li {
   margin-bottom: 14px;
-  line-height: 1.4;
-  transition: transform 0.3s, box-shadow 0.3s;
+  line-height: 1.5;
 }
 
-.pub-list li:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.pub-list a {
+  text-decoration: none;
+  margin-left: 6px;
+  font-size: 0.95em;
+  color: #1e90ff;
+  transition: color 0.2s, transform 0.2s;
 }
 
-.pub-list li a {
-  color: inherit;
-  transition: color 0.3s, transform 0.2s;
+.pub-list a:hover {
+  color: #7b2ff7;
+  transform: scale(1.05);
 }
 
-.pub-list li a:hover {
-  color: #ff7f50;
-  transform: translateX(4px);
-}
-
+/* Titoli colonne */
 .pub-column h2 {
   margin-top: 20px;
-  margin-bottom: 10px;
-  color: inherit;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  color: #333;
+  position: relative;
+}
+
+.pub-column h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #00dbde;
+  margin-top: 6px;
+  border-radius: 3px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #87cefa; /* azzurro chiaro */
+  color: #fff;
+  font-size: 0.95em;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+/* ================= LISTE ================= */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ================= SOCIAL ICONS ================= */
+.social-cv {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-cv .social-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.social-cv .social-icon:hover {
+  transform: scale(1.2) rotate(10deg);
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
 }
 
 /* ================= TARGET SCROLL ================= */
@@ -254,44 +225,10 @@ li {
   margin-top: -100px;
 }
 
-/* ================= SOCIAL ICONS ================= */
-.social-cv {
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-}
-
-.social-cv .social-icon {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  transition: transform 0.3s, filter 0.3s;
-  filter: grayscale(30%);
-}
-
-.social-cv .social-icon:hover {
-  transform: scale(1.3) rotate(-5deg);
-  filter: grayscale(0%) drop-shadow(0 0 6px #1e90ff);
-}
-
+/* ================= RESPONSIVE ================= */
 @media (max-width: 500px) {
   .social-cv .social-icon {
-    width: 26px;
-    height: 26px;
-  }
-}
-
-/* ================= MARGINI LATERALI ================= */
-.content {
-  max-width: 900px;
-  margin: auto;
-  padding: 0 40px;
-}
-
-@media (min-width: 1200px) {
-  .content {
-    padding: 0 80px;
+    width: 28px;
+    height: 28px;
   }
 }
